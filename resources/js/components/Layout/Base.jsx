@@ -9,10 +9,10 @@ const Base = ({children}) => {
     return (
         <StyledBase>
             <Header/>
-            <div className="container vh-100 my-5">
+            <div className="container-fluid my-5">
                 <div className="row">
-                    <main className="main col-md-8">
-                        <div className="shadow-sm">
+                    <main className="col-md-8">
+                        <div className="main">
                             {children}
                         </div>
                     </main>
@@ -28,12 +28,14 @@ export default Base;
 
 const StyledBase = styled.div`
   background: #fafafa;
+  color: #696969;
+  word-break: break-all;
 
-  .main {
-      div {
-          height: 100vh;
-          background: #ffffff;
-          padding: 0 15px;
+  .container-fluid {
+      width: 90%;
+
+      .main {
+          margin: 0 15px;
       }
   }
 `;

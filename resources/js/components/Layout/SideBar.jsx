@@ -4,7 +4,7 @@ import styled from "styled-components";
 const SideBar = () => {
     return (
         <StyledAside className="col-md-4">
-            <div className="shadow-sm">
+            <div className="sidebar shadow-sm">
                 a
             </div>
         </StyledAside>
@@ -14,8 +14,7 @@ const SideBar = () => {
 export default SideBar;
 
 const StyledAside = styled.aside`
-    div {
-        height: 100vh;
+    .sidebar {
         background: #ffffff;
         margin: 0 15px;
         padding: 0 15px;

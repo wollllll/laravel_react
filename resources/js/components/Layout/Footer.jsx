@@ -8,7 +8,7 @@ const Footer = () => {
 
     return (
         <StyledFooter>
-            <div className="container">
+            <div className="container-fluid">
                 <strong>&copy;2020 俺のポートフォリオ</strong>
                 <a href="#" className="scrollToTop shadow-lg" onClick={scrollToTop}>
                     <i className="fas fa-angle-up"></i>
@@ -29,20 +29,24 @@ const StyledFooter = styled.footer`
     font-size: 24px;
     text-align: center;
 
-    .scrollToTop {
-       position: absolute;
-       top: -30px;
-       right: 30px;
-       background: #DDDDDD;
-       border-radius: 50%;
-       height: 60px;
-       width: 60px;
-       color: #696969;
-       line-height: 60px;
+    .container-fluid {
+        width: 90%;
 
-       &:hover {
-          opacity: .8;
-          text-decoration: none;
-       }
+        .scrollToTop {
+           position: absolute;
+           top: -30px;
+           right: 30px;
+           background: #DDDDDD;
+           border-radius: 50%;
+           height: 60px;
+           width: 60px;
+           color: #696969;
+           line-height: 60px;
+
+           &:hover {
+              opacity: .8;
+              text-decoration: none;
+           }
+        }
     }
 `;

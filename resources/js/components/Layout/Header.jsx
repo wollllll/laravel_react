@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 const Header = () => {
     return (
         <StyledHeader className="shadow-sm">
-            <div className="container">
+            <div className="container-fluid">
                 <Link to="/" className="to-top">俺のポートフォリオ</Link>
             </div>
         </StyledHeader>
@@ -20,13 +20,17 @@ const StyledHeader = styled.header`
     line-height: 60px;
     font-size: 24px;
 
-    .to-top {
-      color: #696969;
-      font-weight: bold;
+    .container-fluid {
+        width: 90%;
 
-      &:hover {
-        opacity: .8;
-        text-decoration: none;
-      }
+        .to-top {
+            color: #696969;
+            font-weight: bold;
+
+        &:hover {
+            opacity: .8;
+            text-decoration: none;
+            }
+        }
     }
 `;
