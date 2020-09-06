@@ -3,16 +3,22 @@ import Header from "./Header";
 import Footer from "./Footer";
 import styled from "styled-components";
 import "normalize.css";
+import SideBar from "./SideBar";
 
 const Base = ({children}) => {
     return (
         <StyledBase>
             <Header/>
-            <main>
-                <div className="container">
-                    {children}
+            <div className="container vh-100 my-5">
+                <div className="row">
+                    <main className="main col-md-8">
+                        <div className="shadow-sm">
+                            {children}
+                        </div>
+                    </main>
+                    <SideBar/>
                 </div>
-            </main>
+            </div>
             <Footer/>
         </StyledBase>
     );
@@ -23,7 +29,11 @@ export default Base;
 const StyledBase = styled.div`
   background: #fafafa;
 
-  main {
-    height: 90vh;
+  .main {
+      div {
+          height: 100vh;
+          background: #ffffff;
+          padding: 0 15px;
+      }
   }
 `;

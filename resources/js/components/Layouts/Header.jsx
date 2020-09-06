@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 
 const Header = () => {
     return (
-        <StyledHeader>
+        <StyledHeader className="shadow-sm">
             <div className="container">
                 <Link to="/" className="to-top">俺のポートフォリオ</Link>
             </div>
