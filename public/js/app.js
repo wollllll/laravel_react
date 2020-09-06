@@ -40812,7 +40812,7 @@ function isEventSupported(eventNameSuffix) {
 /**
  * Summary of `DOMEventPluginSystem` event handling:
  *
- *  - Top-level delegation is used to trap most native browser events. This
+ *  - Base-level delegation is used to trap most native browser events. This
  *    may only occur in the main thread and is the responsibility of
  *    ReactDOMEventListener, which is injected and can therefore support
  *    pluggable event sources. This is the only work that occurs in the main
@@ -56397,7 +56397,7 @@ function completeWork(current, workInProgress, renderExpirationTime) {
           var currentHostContext = getHostContext(); // TODO: Move createInstance to beginWork and keep it on a context
           // "stack" as the parent. Then append children as we go in beginWork
           // or completeWork depending on whether we want to add them top->down or
-          // bottom->up. Top->down is faster in IE11.
+          // bottom->up. Base->down is faster in IE11.
 
           var _wasHydrated = popHydrationState(workInProgress);
 
@@ -62011,7 +62011,7 @@ function injectIntoDevTools(devToolsConfig) {
     // Enables DevTools to append owner stacks to error messages in DEV mode.
     getCurrentFiber:  function () {
       return current;
-    } 
+    }
   }));
 }
 var IsSomeRendererActing$1 = ReactSharedInternals.IsSomeRendererActing;
