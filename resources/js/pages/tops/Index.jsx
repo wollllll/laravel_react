@@ -1,15 +1,19 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Base from "../../components/Layout/Base";
 import Item from "../../components/Post/Item";
+import api from "../../api";
 
 const Index = () => {
-    const posts = [
-        {id: 1, title: 'title 1', detail: 'detail 1', created_at: '2020-08-10'},
-        {id: 2, title: 'title 2', detail: 'detail 2', created_at: '2020-08-10'},
-        {id: 3, title: 'title 3', detail: 'detail 3', created_at: '2020-08-10'},
-        {id: 4, title: 'title 4', detail: 'detail 4', created_at: '2020-08-10'},
-        {id: 5, title: 'title 4', detail: 'detail 4', created_at: '2020-08-10'}
-    ];
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        api.posts.getAll()
+            .then(response => {
+                setPosts(response.data.posts);
+            }).catch(error => {
+            console.log(error);
+        });
+    }, []);
 
     return (
         <div>
