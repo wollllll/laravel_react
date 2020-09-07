@@ -27,58 +27,64 @@ const Item = (props) => {
 export default Item;
 
 const StyledItem = styled.div`
-    position: relative;
-    height: 200px;
-    background: #fff;
-    overflow: hidden;
+  position: relative;
+  height: 200px;
+  background: #fff;
+  overflow: hidden;
 
-    &:not(:first-child) {
-        margin-top: 30px;
-    }
+  &:not(:first-child) {
+    margin-top: 30px;
+  }
+
+  &:hover {
+    opacity: .8;
+  }
+
+  .item-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
     &:hover {
-        opacity: .8;
+      text-decoration: none;
+    }
+  }
+
+  .image-box {
+    background: red;
+  }
+
+  .detail-box {
+    padding: 10px;
+
+    p {
+      margin: 0;
+      font-size: 18px;
     }
 
-    .item-link {
+    .header {
+      height: 20%;
+
+      p {
+        font-size: 22px;
+      }
+    }
+
+    .body {
+      height: 60%;
+    }
+
+    .footer {
+      position: relative;
+      height: 20%;
+
+      p {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-
-        &:hover {
-            text-decoration: none;
-        }
+        right: 0;
+        bottom: 0;
+      }
     }
-    .image-box {
-        background: red;
-    }
-    .detail-box {
-        padding: 10px;
-
-        p {
-            margin: 0;
-            font-size: 18px;
-        }
-        .header {
-            height: 20%;
-
-            p {
-                font-size: 22px;
-            }
-        }
-        .body {
-            height: 60%;
-        }
-        .footer {
-            position: relative;
-            height: 20%;
-
-            p {
-                position: absolute;
-                right: 0;
-                bottom: 0;
-            }
-        }
-    }
+  }
 `;
