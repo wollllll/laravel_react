@@ -5,11 +5,11 @@ import NotFound from "../../components/NotFound";
 import Base from "../../components/Layout/Base";
 
 const Show = () => {
-    const {id} = useParams();
+    const {slug} = useParams();
     const [post, setPost] = useState([]);
 
     useEffect(() => {
-        api.posts.findPost(id)
+        api.posts.findPost(slug)
             .then(response => {
                 setPost(response.data.post);
             })

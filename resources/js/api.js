@@ -5,10 +5,10 @@ export default {
         getAll: async function () {
             return await axios.get('/api/posts/getAll')
         },
-        findPost: async function (id) {
+        findPost: async function (slug) {
             return await axios.get('/api/posts/findPost',{
                 params: {
-                    id: id
+                    slug: slug
                 }
             })
         }

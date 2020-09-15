@@ -1,9 +1,12 @@
 import React from "react"
+import Base from "./Layout/Base";
 
 const NotFound = () => {
     return (
         <div>
-            404
+            <Base>
+                404
+            </Base>
         </div>
     )
 }

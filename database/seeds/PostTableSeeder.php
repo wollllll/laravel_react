@@ -15,8 +15,9 @@ class PostTableSeeder extends Seeder
         for ($i = 1; $i < 10; $i++) {
             DB::table('posts')->insert(
                 [
-                    'title' => 'title ' . $i,
-                    'content' => 'content ' . $i
+                    'title' => 'title' . $i,
+                    'content' => 'content ' . $i,
+                    'slug' => 'title' . $i
                 ]
             );
         }

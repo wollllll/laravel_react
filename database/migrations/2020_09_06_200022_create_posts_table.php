@@ -18,6 +18,7 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->string('title')->comment('タイトル');
             $table->text('content')->comment('本文');
+            $table->text('slug')->comment('スラグ');
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
         });

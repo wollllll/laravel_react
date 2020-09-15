@@ -20,7 +20,7 @@ class PostController extends Controller
 
     public function findPost(Request $request)
     {
-        $post = Post::find(Arr::get($request->all(), 'id'));
+        $post = Post::firstWhere('slug', Arr::get($request->all(), 'slug'));
 
         return response()->json([
             'post' => $post

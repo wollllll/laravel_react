@@ -12,7 +12,7 @@ export const Base = () => {
                 <Route exact path="/">
                     <Index/>
                 </Route>
-                <Route exact path="/:id">
+                <Route exact path="/:slug">
                     <Show/>
                 </Route>
                 <Route component={NotFound}/>
