@@ -24,4 +24,3 @@ export const Base = () => {
 if (document.getElementById('app')) {
     ReactDOM.render(<Base/>, document.getElementById('app'));
 }
-

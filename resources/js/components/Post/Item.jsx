@@ -19,7 +19,7 @@ const Item = (props) => {
                     <p>{props.post.created_at}</p>
                 </div>
             </div>
-            <Link to="/a" className="item-link">&nbsp;</Link>
+            <Link to={`/${props.post.id}`} className="item-link">&nbsp;</Link>
         </StyledItem>
     );
 };
