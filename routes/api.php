@@ -15,5 +15,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/posts/getAll', 'Api\PostController@getAll');
-Route::get('/posts/findPost', 'Api\PostController@findPost');
+Route::get('/posts/findBySlug', 'Api\PostController@findBySlug');
+Route::get('/posts/search', 'Api\PostController@search');
 

@@ -2,13 +2,20 @@ import axios from "axios";
 
 export default {
     posts: {
-        getAll: async function () {
+        getAll: async () => {
             return await axios.get('/api/posts/getAll')
         },
-        findPost: async function (slug) {
-            return await axios.get('/api/posts/findPost',{
+        findBySlug: async (slug) => {
+            return await axios.get('/api/posts/findBySlug',{
                 params: {
                     slug: slug
+                }
+            })
+        },
+        search: async (search) => {
+            return await axios.get('/api/posts/search', {
+                params: {
+                    search: search
                 }
             })
         }

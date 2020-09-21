@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 import api from "../../api";
 import NotFound from "../../components/NotFound";
-import Base from "../../components/Layout/Base";
+import Base from "../../components/layouts/Base";
 
 const Show = () => {
     const {slug} = useParams();

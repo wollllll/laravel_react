@@ -60804,7 +60804,7 @@ function commitWork(current, finishedWork) {
     case SimpleMemoComponent:
     case Block:
       {
-        // Layout effects are destroyed during the mutation phase so that all
+        // layouts effects are destroyed during the mutation phase so that all
         // destroy functions for all fibers are called before any create functions.
         // This prevents sibling component effects from interfering with each other,
         // e.g. a destroy function in one component should never override a ref set
@@ -64860,7 +64860,7 @@ function injectIntoDevTools(devToolsConfig) {
     // Enables DevTools to append owner stacks to error messages in DEV mode.
     getCurrentFiber:  function () {
       return current;
-    } 
+    }
   }));
 }
 var IsSomeRendererActing$1 = ReactSharedInternals.IsSomeRendererActing;
@@ -71573,7 +71573,7 @@ function addStyle (obj, options) {
 	// If a transform function was defined, run it on the css
 	if (options.transform && obj.css) {
 	    result = typeof options.transform === 'function'
-		 ? options.transform(obj.css) 
+		 ? options.transform(obj.css)
 		 : options.transform.default(obj.css);
 
 	    if (result) {
@@ -72188,7 +72188,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ "./resources/js/components/Layout/Base.jsx":
 /*!*************************************************!*\
-  !*** ./resources/js/components/Layout/Base.jsx ***!
+  !*** ./resources/js/components/layouts/Base.jsx ***!
   \*************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -72242,7 +72242,7 @@ var StyledBase = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_
 
 /***/ "./resources/js/components/Layout/Footer.jsx":
 /*!***************************************************!*\
-  !*** ./resources/js/components/Layout/Footer.jsx ***!
+  !*** ./resources/js/components/layouts/Footer.jsx ***!
   \***************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -72290,7 +72290,7 @@ var StyledFooter = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].foo
 
 /***/ "./resources/js/components/Layout/Header.jsx":
 /*!***************************************************!*\
-  !*** ./resources/js/components/Layout/Header.jsx ***!
+  !*** ./resources/js/components/layouts/Header.jsx ***!
   \***************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -72335,7 +72335,7 @@ var StyledHeader = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].hea
 
 /***/ "./resources/js/components/Layout/SideBar.jsx":
 /*!****************************************************!*\
-  !*** ./resources/js/components/Layout/SideBar.jsx ***!
+  !*** ./resources/js/components/layouts/SideBar.jsx ***!
   \****************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -72396,7 +72396,7 @@ var NotFound = function NotFound() {
 
 /***/ "./resources/js/components/Post/Item.jsx":
 /*!***********************************************!*\
-  !*** ./resources/js/components/Post/Item.jsx ***!
+  !*** ./resources/js/components/posts/Item.jsx ***!
   \***********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -72500,8 +72500,8 @@ if (document.getElementById('app')) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_Layout_Base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/Layout/Base */ "./resources/js/components/Layout/Base.jsx");
-/* harmony import */ var _components_Post_Item__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/Post/Item */ "./resources/js/components/Post/Item.jsx");
+/* harmony import */ var _components_Layout_Base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/layouts/Base */ "./resources/js/components/Layout/Base.jsx");
+/* harmony import */ var _components_Post_Item__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/posts/Item */ "./resources/js/components/Post/Item.jsx");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 

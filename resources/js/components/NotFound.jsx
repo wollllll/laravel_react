@@ -1,5 +1,5 @@
 import React from "react"
-import Base from "./Layout/Base";
+import Base from "./layouts/Base";
 
 const NotFound = () => {
     return (

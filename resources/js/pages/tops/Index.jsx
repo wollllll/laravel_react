@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
-import Base from "../../components/Layout/Base";
-import Item from "../../components/Post/Item";
+import Base from "../../components/layouts/Base";
+import Item from "../../components/posts/Item";
 import api from "../../api";
 
 const Index = () => {
@@ -10,9 +10,10 @@ const Index = () => {
         api.posts.getAll()
             .then(response => {
                 setPosts(response.data.posts);
-            }).catch(error => {
-            console.log(error);
-        });
+            })
+            .catch(error => {
+                console.log(error);
+            });
     }, []);
 
     return (

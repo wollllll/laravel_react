@@ -18,12 +18,21 @@ class PostController extends Controller
         ]);
     }
 
-    public function findPost(Request $request)
+    public function findBySlug(Request $request)
     {
         $post = Post::firstWhere('slug', Arr::get($request->all(), 'slug'));
 
         return response()->json([
             'post' => $post
+        ]);
+    }
+
+    public function search(Request $request)
+    {
+        $posts = Post::where('title', 'LIKE', '%' . Arr::get($request->all(), 'search') . '%')->get();
+
+        return response()->json([
+            'posts' => $posts
         ]);
     }
 }
