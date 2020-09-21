@@ -9,12 +9,8 @@ export const Base = () => {
     return (
         <Router>
             <Switch>
-                <Route exact path="/">
-                    <Index/>
-                </Route>
-                <Route exact path="/:slug">
-                    <Show/>
-                </Route>
+                <Route exact path="/" component={Index}/>
+                <Route exact path="/:slug" component={Show}/>
                 <Route component={NotFound}/>
             </Switch>
         </Router>

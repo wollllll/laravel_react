@@ -9,7 +9,7 @@ const Show = () => {
     const [post, setPost] = useState([]);
 
     useEffect(() => {
-        api.posts.findPost(slug)
+        api.posts.findBySlug(slug)
             .then(response => {
                 setPost(response.data.post);
             })
