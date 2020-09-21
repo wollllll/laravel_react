@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import api from "../../api";
 
-const SideBar = () => {
+const SideBar = ({setPosts}) => {
     const onChangeSearch = (e) => {
         api.posts.search(e.target.value)
             .then(response => {
-                console.log(response);
+                setPosts(response.data.posts);
             })
             .catch(error => {
                 console.log(error);
@@ -16,13 +16,11 @@ const SideBar = () => {
     return (
         <StyledAside className="col-md-4">
             <div className="sidebar shadow-sm">
-                <form>
-                    <input
-                        type="text"
-                        className="form-control"
-                        onChange={onChangeSearch}
-                    />
-                </form>
+                <input
+                    type="text"
+                    className="form-control"
+                    onChange={onChangeSearch}
+                />
             </div>
         </StyledAside>
     );

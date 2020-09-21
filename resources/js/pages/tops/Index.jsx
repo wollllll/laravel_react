@@ -18,7 +18,7 @@ const Index = () => {
 
     return (
         <div>
-            <Base>
+            <Base setPosts={setPosts}>
                 {
                     posts.map(post => {
                         return (

@@ -5,7 +5,7 @@ import styled from "styled-components";
 import "normalize.css";
 import SideBar from "./SideBar";
 
-const Base = ({children}) => {
+const Base = ({children, setPosts}) => {
     return (
         <StyledBase>
             <Header/>
@@ -16,7 +16,7 @@ const Base = ({children}) => {
                             {children}
                         </div>
                     </main>
-                    <SideBar/>
+                    <SideBar setPosts={setPosts}/>
                 </div>
             </div>
             <Footer/>
