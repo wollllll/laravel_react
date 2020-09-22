@@ -1,26 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import api from "../../api";
 
 const SideBar = ({setPosts}) => {
-    const onChangeSearch = (e) => {
-        api.posts.getAll(e.target.value)
-            .then(response => {
-                setPosts(response.data.posts.data);
-            })
-            .catch(error => {
-                console.log(error);
-            });
-    };
-
     return (
         <StyledAside className="col-md-4">
             <div className="sidebar shadow-sm">
-                <input
-                    type="text"
-                    className="form-control"
-                    onChange={onChangeSearch}
-                />
+
             </div>
         </StyledAside>
     );
