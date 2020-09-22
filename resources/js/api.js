@@ -2,10 +2,11 @@ import axios from "axios";
 
 export default {
     posts: {
-        getAll: async (query) => {
+        getAll: async (query, page = 1) => {
             return await axios.get('/api/posts/getAll', {
                 params: {
-                    query: query
+                    query: query,
+                    page: page
                 }
             })
         },

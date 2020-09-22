@@ -5,10 +5,10 @@ import styled from "styled-components";
 import "normalize.css";
 import SideBar from "./SideBar";
 
-const Base = ({children, setPosts}) => {
+const Base = ({children, setPosts, setPageCurrent}) => {
     return (
         <StyledBase>
-            <Header/>
+            <Header setPageCurrent={setPageCurrent}/>
             <div className="container-fluid my-5">
                 <div className="row">
                     <main className="col-md-8">

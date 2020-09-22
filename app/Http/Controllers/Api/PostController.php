@@ -11,7 +11,7 @@ class PostController extends Controller
 {
     public function getAll(Request $request)
     {
-        $posts = Post::where('title', 'LIKE', '%' . Arr::get($request->all(), 'query') . '%')->get();
+        $posts = Post::where('title', 'LIKE', '%' . Arr::get($request->all(), 'query') . '%')->paginate(3);
 
         return response()->json([
             'posts' => $posts

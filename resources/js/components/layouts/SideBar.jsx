@@ -6,7 +6,7 @@ const SideBar = ({setPosts}) => {
     const onChangeSearch = (e) => {
         api.posts.getAll(e.target.value)
             .then(response => {
-                setPosts(response.data.posts);
+                setPosts(response.data.posts.data);
             })
             .catch(error => {
                 console.log(error);
