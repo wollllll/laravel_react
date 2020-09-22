@@ -4,7 +4,7 @@ import api from "../../api";
 
 const SideBar = ({setPosts}) => {
     const onChangeSearch = (e) => {
-        api.posts.search(e.target.value)
+        api.posts.getAll(e.target.value)
             .then(response => {
                 setPosts(response.data.posts);
             })

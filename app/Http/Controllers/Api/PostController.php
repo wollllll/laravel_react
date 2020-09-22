@@ -9,9 +9,9 @@ use Illuminate\Support\Arr;
 
 class PostController extends Controller
 {
-    public function getAll()
+    public function getAll(Request $request)
     {
-        $posts = Post::get();
+        $posts = Post::where('title', 'LIKE', '%' . Arr::get($request->all(), 'query') . '%')->get();
 
         return response()->json([
             'posts' => $posts
@@ -24,15 +24,6 @@ class PostController extends Controller
 
         return response()->json([
             'post' => $post
-        ]);
-    }
-
-    public function search(Request $request)
-    {
-        $posts = Post::where('title', 'LIKE', '%' . Arr::get($request->all(), 'search') . '%')->get();
-
-        return response()->json([
-            'posts' => $posts
         ]);
     }
 }
